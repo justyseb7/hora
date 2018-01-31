@@ -24,7 +24,7 @@
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="10dp"
             android:ellipsize="marquee"
             android:gravity="bottom|start"
             android:marqueeRepeatLimit="marquee_forever"
@@ -62,7 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Search"
-            android:textColor="#FAFAD2"/>
+            android:textColor="#FAFAD2"
+            android:background="@drawable/rounded_bt"
 
     </LinearLayout>
 
