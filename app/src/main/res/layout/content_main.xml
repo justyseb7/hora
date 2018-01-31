@@ -11,11 +11,12 @@
     tools:context="com.example.justinsebastian.hora.MainActivity">
 
     <LinearLayout
-        android:layout_width="388dp"
-        android:layout_height="369dp"
-        android:layout_marginTop="312dp"
-        android:orientation="vertical"
+        android:layout_width="412dp"
+        android:layout_height="367dp"
 
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="280dp"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,7 +25,7 @@
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="8dp"
             android:ellipsize="marquee"
             android:gravity="bottom|start"
             android:marqueeRepeatLimit="marquee_forever"
@@ -59,11 +60,12 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Search"
-            android:textColor="#FAFAD2"
+            android:layout_width="354dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
             android:background="@drawable/rounded_bt"
+            android:text="Search"
+            android:textColor="#FAFAD2" />
 
     </LinearLayout>
 
