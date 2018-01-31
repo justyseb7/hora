@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">hora</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="names">
+        <item>Select Time</item>
+        <item>06.00am to 12.00pm</item>
+        <item>12.00pm to 06.00pm</item>
+        <item>06.00pm to 06.00am</item>
+        <item>Any Time</item>
+    </string-array>
+
+</resources>
