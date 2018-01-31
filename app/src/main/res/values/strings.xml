@@ -8,5 +8,7 @@
         <item>06.00pm to 06.00am</item>
         <item>Any Time</item>
     </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
 
 </resources>
