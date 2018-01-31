@@ -7,24 +7,18 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main"
-    android:background="#00ff00"
+    android:background="@drawable/bus1"
     tools:context="com.example.justinsebastian.hora.MainActivity">
 
     <LinearLayout
         android:layout_width="388dp"
-        android:layout_height="560dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="60dp"
-        android:background="#00ff00"
+        android:layout_height="369dp"
+        android:layout_marginTop="312dp"
         android:orientation="vertical"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="270dp"
-            android:src="@drawable/batman" />
 
         <TextView
             android:id="@+id/text1"
@@ -67,7 +61,8 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Search" />
+            android:text="Search"
+            android:textColor="#FAFAD2"/>
 
     </LinearLayout>
 
