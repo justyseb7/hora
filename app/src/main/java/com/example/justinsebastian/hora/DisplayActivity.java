@@ -50,29 +50,7 @@ public class DisplayActivity extends FragmentActivity implements OnMapReadyCallb
         mMap.setMaxZoomPreference(16);
        // Toast.makeText(this, "Please insert all values", Toast.LENGTH_SHORT).show();
         subscribeToUpdates();
-       // loginToFirebase();
-    }
-/*
-    private void loginToFirebase() {
-        String email = "joycebellajohny@cs.ajce.in ";
-        String password = password;
-        Toast.makeText(this, "Please insert all values", Toast.LENGTH_SHORT).show();
-
-        // Authenticate with Firebase and subscribe to updates
-        FirebaseAuth.getInstance().signInWithEmailAndPassword(
-                email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    subscribeToUpdates();
-                    Log.d(TAG, "firebase auth success");
-                } else {
-                    Log.d(TAG, "firebase auth failed");
-                }
-            }
-        });
-    }
-    */
+     }
     private void subscribeToUpdates() {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(getString(R.string.firebase_path));
         ref.addChildEventListener(new ChildEventListener() {

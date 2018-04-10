@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         //marequee
-      //  textview =(TextView) findViewById(R.id.text1);
-       // textview.setSelected(true);
+        textview =(TextView) findViewById(R.id.text1);
+        textview.setSelected(true);
         // editfields
         textView6 = (EditText) findViewById(R.id.textView6);
         textView7 = (EditText) findViewById(R.id.textView7);

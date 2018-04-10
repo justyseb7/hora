@@ -42,11 +42,11 @@ public class details_display extends AppCompatActivity {
         Ss = getIntent().getStringExtra( "key2" );
         Ty = getIntent().getStringExtra( "key3" );
         Ti = getIntent().getStringExtra( "key4" );
-        Toast.makeText( this, "source is " + Ss, Toast.LENGTH_SHORT ).show();
-        Toast.makeText( this, "Dest is " + Dd, Toast.LENGTH_SHORT ).show();
-        Toast.makeText( this, "name is " + Nn, Toast.LENGTH_SHORT ).show();
-        Toast.makeText( this, "type is " + Ty, Toast.LENGTH_SHORT ).show();
-        Toast.makeText( this, "time is " + Ti, Toast.LENGTH_SHORT ).show();
+      //  Toast.makeText( this, "source is " + Ss, Toast.LENGTH_SHORT ).show();
+      //  Toast.makeText( this, "Dest is " + Dd, Toast.LENGTH_SHORT ).show();
+      //  Toast.makeText( this, "name is " + Nn, Toast.LENGTH_SHORT ).show();
+      //  Toast.makeText( this, "type is " + Ty, Toast.LENGTH_SHORT ).show();
+      //  Toast.makeText( this, "time is " + Ti, Toast.LENGTH_SHORT ).show();
 
     }
         @Override
@@ -58,15 +58,17 @@ public class details_display extends AppCompatActivity {
                     list.clear();
                     for(DataSnapshot all:dataSnapshot.getChildren())
                     for (DataSnapshot all_data : all.getChildren()) {
-                        if(all_data!=null)
-                            Toast.makeText( com.example.justinsebastian.hora.details_display.this,".",Toast.LENGTH_SHORT).show();
-                        Detail detail = all_data.getValue(Detail.class);
-                        if(detail.getSource().equals( Ss )){
-                            if(detail.getDestination().equals( Dd ));{
-                                if(detail.getName().equals( Nn )){
-                                    if(detail.getSourcetime().equals( Ti )){
-                                        if(detail.getType().equals( Ty )){
-                                            list.add(detail);
+                        if(all_data!=null) {
+                            //Toast.makeText( com.example.justinsebastian.hora.details_display.this, ".", Toast.LENGTH_SHORT ).show();
+                            Detail detail = all_data.getValue( Detail.class );
+                            if (detail.getSource().equals( Ss )) {
+                                if (detail.getDestination().equals( Dd )) ;
+                                {
+                                    if (detail.getName().equals( Nn )) {
+                                        if (detail.getSourcetime().equals( Ti )) {
+                                            if (detail.getType().equals( Ty )) {
+                                                list.add( detail );
+                                            }
                                         }
                                     }
                                 }

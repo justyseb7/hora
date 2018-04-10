@@ -31,7 +31,6 @@ public class ResultActivity extends AppCompatActivity {
     //adapter object
     private RecyclerView.Adapter adapter;
 
-
     TextView textview;
     private   ListView listView;
     String sourcE;
@@ -48,14 +47,13 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(null);
         setContentView(R.layout.activity_result);
 
-
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //marequee
 
-        // textview =(TextView) findViewById(R.id.text);
-        // textview.setSelected(true);
+         textview =(TextView) findViewById(R.id.text);
+         textview.setSelected(true);
 
         //    listView = (ListView) findViewById( R.id.list1 );
         databaseReference = FirebaseDatabase.getInstance().getReference("busdetail");
@@ -74,9 +72,6 @@ public class ResultActivity extends AppCompatActivity {
         middle = arrayString[1];
         stop = arrayString[2];
 //        Toast.makeText( this, "start is " + start, Toast.LENGTH_SHORT ).show();
-//        Toast.makeText( this, "middle is " + middle, Toast.LENGTH_SHORT ).show();
-//        Toast.makeText( this, "stop is " + stop, Toast.LENGTH_SHORT ).show();
-
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -85,7 +80,7 @@ public class ResultActivity extends AppCompatActivity {
                 for(DataSnapshot all : dataSnapshot.getChildren()){
                     for (DataSnapshot all_data : all.getChildren()) {
                         if (all_data != null) {
-                            Toast.makeText( ResultActivity.this, "Searching..", Toast.LENGTH_SHORT ).show();
+                            //Toast.makeText( ResultActivity.this, "Searching..", Toast.LENGTH_SHORT ).show();
                             Detail detail = all_data.getValue(Detail.class);
 
                             if (detail.getSource().equals( sourcE ) || detail.getStop1().equals( sourcE )|| detail.getStop2().equals( sourcE ) ) {
@@ -97,22 +92,16 @@ public class ResultActivity extends AppCompatActivity {
                                     }
                                 }
                             }
-
                         }
                     }
-
                 }
                 adapter = new DetailsAdapter(getApplicationContext(), list);
                 recyclerView.setAdapter( adapter );
-
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
             }
         });
-
     }
     public boolean isTimeWithinInterval(String lwrLimit, String uprLimit, String time){
 
@@ -152,7 +141,6 @@ public class ResultActivity extends AppCompatActivity {
            // Log.d(TAG,true+"");
             return true;
         }
-
         return false;
     }
 }
