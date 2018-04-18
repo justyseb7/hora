@@ -52,8 +52,8 @@ public class ResultActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //marequee
 
-         textview =(TextView) findViewById(R.id.text);
-         textview.setSelected(true);
+//         textview =(TextView) findViewById(R.id.text);
+ //        textview.setSelected(true);
 
         //    listView = (ListView) findViewById( R.id.list1 );
         databaseReference = FirebaseDatabase.getInstance().getReference("busdetail");
@@ -95,6 +95,10 @@ public class ResultActivity extends AppCompatActivity {
                         }
                     }
                 }
+                if(list.isEmpty())
+                {
+                    Toast.makeText( ResultActivity.this, "Sorry no bus available in this route ...", Toast.LENGTH_SHORT ).show();
+                }
                 adapter = new DetailsAdapter(getApplicationContext(), list);
                 recyclerView.setAdapter( adapter );
             }
@@ -102,7 +106,10 @@ public class ResultActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
+
     }
+
+
     public boolean isTimeWithinInterval(String lwrLimit, String uprLimit, String time){
 
         // Time 1 in string - Lower limit
